@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "放行结论",
+  "type": "object",
+  "required": [
+    "decision_id",
+    "plan_id",
+    "allowed",
+    "checks",
+    "conclusion",
+    "snapshot",
+    "decided_by",
+    "decided_at"
+  ],
+  "properties": {
+    "decision_id": {
+      "type": "string",
+      "description": "结论编号"
+    },
+    "plan_id": {
+      "type": "string",
+      "description": "治疗计划编号"
+    },
+    "allowed": {
+      "type": "boolean",
+      "description": "是否放行"
+    },
+    "checks": {
+      "type": "array",
+      "description": "七道准入闸门逐项结论",
+      "items": {
+        "type": "object",
+        "required": ["gate", "passed", "detail", "evidence"],
+        "properties": {
+          "gate": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "detail": {"type": "string"},
+          "evidence": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "conclusion": {
+      "type": "string",
+      "description": "可解释的总体结论"
+    },
+    "snapshot": {
+      "type": "object",
+      "description": "评估时采用的规范、证据与设备状态快照"
+    },
+    "decided_by": {
+      "type": "string"
+    },
+    "decided_at": {
+      "type": "string"
+    },
+    "manual": {
+      "type": "boolean",
+      "description": "是否人工决定"
+    }
+  },
+  "additionalProperties": false
+}

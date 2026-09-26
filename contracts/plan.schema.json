@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "治疗计划",
+  "type": "object",
+  "required": [
+    "plan_id",
+    "case_ref",
+    "institution_id",
+    "indication",
+    "standard_id",
+    "standard_version",
+    "ethics_approval_id",
+    "consent_id",
+    "batch_id",
+    "operator_id",
+    "device_snapshot",
+    "status",
+    "created_at"
+  ],
+  "properties": {
+    "plan_id": {"type": "string"},
+    "case_ref": {"type": "string", "description": "去标识病例号"},
+    "institution_id": {"type": "string"},
+    "indication": {
+      "type": "string",
+      "enum": ["偏瘫", "癫痫", "脑卒中康复"],
+      "description": "非侵入式产品允许的治疗范围，冻结到本计划"
+    },
+    "standard_id": {"type": "string"},
+    "standard_version": {"type": "string", "description": "计划冻结的标准版本"},
+    "ethics_approval_id": {"type": "string"},
+    "consent_id": {"type": "string"},
+    "batch_id": {"type": "string"},
+    "operator_id": {"type": "string"},
+    "device_snapshot": {
+      "type": "object",
+      "description": "创建时的固件/校准/算法版本快照"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["进行中", "已暂停", "待补充告知", "待重新审批", "已完成", "已终止"]
+    },
+    "created_at": {"type": "string"},
+    "consult_flag": {"type": "boolean"},
+    "status_reason": {"type": "string"}
+  },
+  "additionalProperties": false
+}

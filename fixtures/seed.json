@@ -1,0 +1,81 @@
+{
+  "institutions": [
+    {"institution_id": "INST-01", "name": "联合体示范医院一", "ward_level": "三级", "emergency_kit": true},
+    {"institution_id": "INST-02", "name": "联合体示范医院二", "ward_level": "二级", "emergency_kit": true}
+  ],
+  "standards": [
+    {
+      "standard_id": "T/BCI-WARD",
+      "version": "1.0.0",
+      "min_ward_level": "二级",
+      "emergency_kit_required": true,
+      "allowed_indications": ["偏瘫", "癫痫", "脑卒中康复"],
+      "age_min": 18,
+      "age_max": 75,
+      "excluded_conditions": ["颅内金属植入", "严重心律失常"],
+      "min_operator_level": "中级",
+      "sae_report_hours": 24,
+      "change_notes": "首版病房设置与管理规范"
+    }
+  ],
+  "ethics": [
+    {
+      "approval_id": "ETH-01",
+      "institution_id": "INST-01",
+      "protocol_no": "EC-2026-001",
+      "indications": ["偏瘫", "癫痫", "脑卒中康复"],
+      "device_models": ["BCI-X1"],
+      "valid_from": "2026-01-01",
+      "valid_to": "2026-12-31",
+      "status": "有效"
+    }
+  ],
+  "cases": [
+    {"case_ref": "CASE-01", "institution_id": "INST-01", "age": 60, "sex": "女", "conditions": ["高血压"]}
+  ],
+  "batches": [
+    {
+      "batch_id": "BAT-01",
+      "model": "BCI-X1",
+      "manufacturer": "某医疗科技",
+      "firmware_version": "F1.0",
+      "calibration_version": "C1.0",
+      "algorithm_version": "A1.0"
+    }
+  ],
+  "consents": [
+    {
+      "consent_id": "CON-01",
+      "case_ref": "CASE-01",
+      "scope": ["治疗", "数据使用"],
+      "device_snapshot": {"firmware_version": "F1.0", "calibration_version": "C1.0", "algorithm_version": "A1.0"},
+      "signed_at": "2026-09-01T09:00:00+08:00",
+      "status": "有效"
+    }
+  ],
+  "operators": [
+    {
+      "operator_id": "OP-01",
+      "name": "张某",
+      "institution_id": "INST-01",
+      "qualifications": [
+        {"device_model": "BCI-X1", "indication": "偏瘫", "level": "高级", "valid_to": "2027-01-01"}
+      ]
+    }
+  ],
+  "plans": [
+    {
+      "case_ref": "CASE-01",
+      "institution_id": "INST-01",
+      "indication": "偏瘫",
+      "ethics_approval_id": "ETH-01",
+      "consent_id": "CON-01",
+      "batch_id": "BAT-01",
+      "operator_id": "OP-01",
+      "consult_flag": true
+    }
+  ],
+  "observations": [
+    {"plan_id": "PLAN-0001", "kind": "基线评估", "recorded_by": "OP-01", "summary": "基线运动功能评分已记录"}
+  ]
+}
