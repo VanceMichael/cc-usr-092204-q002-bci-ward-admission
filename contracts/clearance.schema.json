@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "治疗前放行结论",
+  "type": "object",
+  "required": [
+    "check_id",
+    "decided_at",
+    "case_id",
+    "plan_id",
+    "verdict",
+    "verdict_label",
+    "rules",
+    "frozen_plan",
+    "manual_decisions",
+    "evidence_bundle",
+    "explanation",
+    "rule_engine_version",
+    "ledger_tail_hash"
+  ],
+  "properties": {
+    "check_id": {"type": "string"},
+    "decided_at": {"type": "string", "description": "结论生成时间（ISO-8601）"},
+    "case_id": {"type": "string"},
+    "plan_id": {"type": "string", "description": "本次核对所依据的冻结治疗计划版本"},
+    "setting": {"type": "string", "description": "本次实际治疗场所"},
+    "operator_id": {"type": "string"},
+    "verdict": {
+      "type": "string",
+      "enum": ["go", "go_with_override", "hold", "no_go"],
+      "description": "放行/附条件放行/暂缓/不予放行"
+    },
+    "verdict_label": {"type": "string"},
+    "rules": {
+      "type": "array",
+      "description": "逐条规则核对结果，是可解释结论的最小单元",
+      "items": {
+        "type": "object",
+        "required": ["code", "title", "passed", "severity", "detail", "evidence"],
+        "properties": {
+          "code": {"type": "string"},
+          "title": {"type": "string"},
+          "passed": {"type": "boolean"},
+          "severity": {"type": "string", "enum": ["hard", "hold", "info"]},
+          "detail": {"type": "string"},
+          "evidence": {"type": "array"}
+        }
+      }
+    },
+    "overrides_used": {"type": "array", "description": "本次结论引用的人工背书"},
+    "frozen_plan": {"type": "object", "description": "治疗计划冻结快照，标准升级不追溯改写"},
+    "manual_decisions": {"type": "array", "description": "人工恢复/背书等决定留痕"},
+    "evidence_bundle": {
+      "type": "object",
+      "description": "结论所依据的规范、伦理、授权、设备、操作者、病房、观察证据",
+      "properties": {
+        "standard": {"type": "object"},
+        "ethics": {}
+      }
+    },
+    "explanation": {"type": "array", "items": {"type": "string"}},
+    "rule_engine_version": {"type": "string"},
+    "ledger_tail_hash": {"type": "string", "description": "结论生成时事件链尾哈希，锚定审计时点"}
+  }
+}

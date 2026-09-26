@@ -1,0 +1,170 @@
+[
+  {
+    "hospital_id": "H-001",
+    "name": "协作机构01（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-001"
+  },
+  {
+    "hospital_id": "H-002",
+    "name": "协作机构02（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-002"
+  },
+  {
+    "hospital_id": "H-003",
+    "name": "协作机构03（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-003"
+  },
+  {
+    "hospital_id": "H-004",
+    "name": "协作机构04（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-004"
+  },
+  {
+    "hospital_id": "H-005",
+    "name": "协作机构05（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-005"
+  },
+  {
+    "hospital_id": "H-006",
+    "name": "协作机构06（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-006"
+  },
+  {
+    "hospital_id": "H-007",
+    "name": "协作机构07（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-007"
+  },
+  {
+    "hospital_id": "H-008",
+    "name": "协作机构08（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-008"
+  },
+  {
+    "hospital_id": "H-009",
+    "name": "协作机构09（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-009"
+  },
+  {
+    "hospital_id": "H-010",
+    "name": "协作机构10（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-010"
+  },
+  {
+    "hospital_id": "H-011",
+    "name": "协作机构11（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-011"
+  },
+  {
+    "hospital_id": "H-012",
+    "name": "协作机构12（脑机病房）",
+    "city": "广州",
+    "ward_id": "W-012"
+  },
+  {
+    "hospital_id": "H-013",
+    "name": "协作机构13（脑机病房）",
+    "city": "深圳",
+    "ward_id": "W-013"
+  },
+  {
+    "hospital_id": "H-014",
+    "name": "协作机构14（脑机病房）",
+    "city": "深圳",
+    "ward_id": "W-014"
+  },
+  {
+    "hospital_id": "H-015",
+    "name": "协作机构15（脑机病房）",
+    "city": "深圳",
+    "ward_id": "W-015"
+  },
+  {
+    "hospital_id": "H-016",
+    "name": "协作机构16（脑机病房）",
+    "city": "深圳",
+    "ward_id": "W-016"
+  },
+  {
+    "hospital_id": "H-017",
+    "name": "协作机构17（脑机病房）",
+    "city": "深圳",
+    "ward_id": "W-017"
+  },
+  {
+    "hospital_id": "H-018",
+    "name": "协作机构18（脑机病房）",
+    "city": "深圳",
+    "ward_id": "W-018"
+  },
+  {
+    "hospital_id": "H-019",
+    "name": "协作机构19（脑机病房）",
+    "city": "佛山",
+    "ward_id": "W-019"
+  },
+  {
+    "hospital_id": "H-020",
+    "name": "协作机构20（脑机病房）",
+    "city": "佛山",
+    "ward_id": "W-020"
+  },
+  {
+    "hospital_id": "H-021",
+    "name": "协作机构21（脑机病房）",
+    "city": "佛山",
+    "ward_id": "W-021"
+  },
+  {
+    "hospital_id": "H-022",
+    "name": "协作机构22（脑机病房）",
+    "city": "东莞",
+    "ward_id": "W-022"
+  },
+  {
+    "hospital_id": "H-023",
+    "name": "协作机构23（脑机病房）",
+    "city": "东莞",
+    "ward_id": "W-023"
+  },
+  {
+    "hospital_id": "H-024",
+    "name": "协作机构24（脑机病房）",
+    "city": "珠海",
+    "ward_id": "W-024"
+  },
+  {
+    "hospital_id": "H-025",
+    "name": "协作机构25（脑机病房）",
+    "city": "珠海",
+    "ward_id": "W-025"
+  },
+  {
+    "hospital_id": "H-026",
+    "name": "协作机构26（脑机病房）",
+    "city": "中山",
+    "ward_id": "W-026"
+  },
+  {
+    "hospital_id": "H-027",
+    "name": "协作机构27（脑机病房）",
+    "city": "惠州",
+    "ward_id": "W-027"
+  },
+  {
+    "hospital_id": "H-028",
+    "name": "协作机构28（脑机病房）",
+    "city": "汕头",
+    "ward_id": "W-028"
+  }
+]
